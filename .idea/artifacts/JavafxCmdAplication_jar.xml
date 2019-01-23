@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JavafxCmdAplication:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavafxCmdAplication_jar</output-path>
+    <root id="archive" name="JavafxCmdAplication.jar">
+      <element id="module-output" name="JavafxCmdAplication" />
+    </root>
+  </artifact>
+</component>
