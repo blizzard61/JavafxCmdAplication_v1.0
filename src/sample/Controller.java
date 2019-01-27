@@ -56,6 +56,17 @@ public class Controller implements Initializable {
     public Button app021;
     public Button sys333;
     public Button kasper;
+    ///////////new tab
+    public Button actionRegedit;
+    public Button localPolicy;
+    public Button taskManager;
+    public Button groupPolicy;
+    public Button services;
+    public Button rdp;
+    public Button netConnect;
+    public Button systemProperties;
+    public Button installDeleteSoft;
+
 
 
     @Override
@@ -307,4 +318,74 @@ public class Controller implements Initializable {
             //e1.printStackTrace(); // тут можно ничего не писать ели не собираемся ловить ошибки
         }
     }
+
+    public void actionRegedit(ActionEvent actionEvent) {
+        Runtime rt = Runtime.getRuntime();
+        try {   // try == попытаться если не получилось пропустить и продолжить
+            rt.exec(new String[]{"cmd.exe","/c","regedit"});
+
+        } catch (Exception e1) {
+            // TODO Auto-generated catch block
+            //e1.printStackTrace(); // тут можно ничего не писать ели не собираемся ловить ошибки
+        }
+    }
+
+    public void localPolicy(ActionEvent actionEvent) {
+        Runtime rt = Runtime.getRuntime();
+        try{
+            rt.exec(new String[]{"cmd.exe", "/c", "secpol.msc"});
+        }catch (Exception r4){}
+    }
+
+    public void taskManager(ActionEvent actionEvent) {
+        Runtime rt = Runtime.getRuntime();
+        try{
+            rt.exec(new String[]{"cmd.exe", "/c", "taskmgr"});
+        }catch (Exception r4){}
+    }
+
+    public void groupPolicy(ActionEvent actionEvent) {
+        Runtime rt = Runtime.getRuntime();
+        try{
+            rt.exec(new String[]{"cmd.exe", "/c", "gpedit.msc"});
+        }catch (Exception r4){}
+    }
+
+    public void servises(ActionEvent actionEvent) {
+        Runtime rt = Runtime.getRuntime();
+        try{
+            rt.exec(new String[]{"cmd.exe", "/c", "services.msc"});
+        }catch (Exception r4){}
+    }
+
+    public void rdp(ActionEvent actionEvent) {
+        Runtime rt = Runtime.getRuntime();
+        try {   // try == попытаться если не получилось пропустить и продолжить
+            rt.exec(new String[]{"cmd.exe","/c", "mstsc /admin"});
+        } catch (Exception e1) {}
+    }
+
+    public void netConnect(ActionEvent actionEvent) {
+        Runtime rt = Runtime.getRuntime();
+        try{
+            rt.exec(new String[]{"cmd.exe", "/c", "ncpa.cpl"});
+        }catch (Exception r4){}
+    }
+
+    public void systemProperties(ActionEvent actionEvent) {
+        Runtime rt = Runtime.getRuntime();
+        try
+        {
+            rt.exec(new String[]{"cmd.exe", "/c", "compmgmt.msc"});
+        }catch (Exception e3){}
+    }
+
+    public void installDeleteSoft(ActionEvent actionEvent) {
+        Runtime rt = Runtime.getRuntime();
+        try {
+            rt.exec(new String[]{"cmd.exe", "/c", "appwiz.cpl"});
+        }catch (Exception e2){}
+    }
+
+    /////////////////////
 }
